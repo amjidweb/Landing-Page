@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin:0 ;
+}
+.navbar {
+background-color: blueviolet;
+}
+.navbar .head { 
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+color: aliceblue
+}
+
+.navbar .head .menu-icons .close {
+  display: none;
+}
+.navbar .head .menu-icons .open {
+  display: inline;
+}
+
+.navbar .head .open, .close, .search  {
+    width: 35px; 
+    height: 35px;
+}
+
+.navbar .close {
+    position: relative;
+    z-index: 1001;
+}
+
+.menu-items {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+    padding: 10px;
+    padding-top: 100px;
+    margin: 0;
+    background-color: rgb(170, 138, 203);
+    width: 50vw; 
+    height: 100vh;
+    transform: translateX(-80vw);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.active {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.navbar .menu-items li a {
+    text-decoration: none;
+color: antiquewhite; 
+font-size: 25px;
+}
+
